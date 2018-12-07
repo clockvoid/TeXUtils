@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.lucciola.csvtotex.CSVToTexPresenter">
+<GridPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.lucciola.csvtotex.CSVToTexPresenter"
+        hgap="10"
+        vgap="10"
+        alignment="CENTER"
+        >
 
-</AnchorPane>
+    <padding>
+        <Insets
+                bottom="10.0"
+                left="10.0"
+                right="10.0"
+                top="10.0"
+                />
+    </padding>
+
+    <TextArea
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="0"
+            />
+
+    <TextArea
+            maxWidth="Infinity"
+            maxHeight="Infinity"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="1"
+            />
+
+</GridPane>
