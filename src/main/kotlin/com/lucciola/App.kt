@@ -2,24 +2,24 @@ package com.lucciola
 
 import com.lucciola.csvtotex.CSVToTexView
 import javafx.application.Application
-import javafx.scene.Group
 import javafx.scene.Scene
+import javafx.scene.layout.BorderPane
 import javafx.stage.Stage
 
 class App : Application() {
 
-    lateinit var view: CSVToTexView
-    lateinit var root: Group
+    private lateinit var view: CSVToTexView
+    private lateinit var root: BorderPane
 
     override fun start(primaryStage: Stage?) {
-        root = Group()
+        root = BorderPane()
+        view = CSVToTexView(root)
+        view.start(primaryStage)
         primaryStage?.apply {
             title = "CSV to TeX Table"
             scene = Scene(root)
             show()
         }
-        view = CSVToTexView(root)
-        view.start(primaryStage)
     }
 }
 

@@ -3,13 +3,13 @@ package com.lucciola.csvtotex
 import javafx.fxml.FXMLLoader
 import javafx.stage.Stage
 import javafx.application.Platform
-import javafx.scene.Group
+import javafx.scene.layout.BorderPane
 
-class CSVToTexView(override val parent: Group) : CSVToTexContract.View {
+class CSVToTexView(override val parent: BorderPane) : CSVToTexContract.View {
 
     override fun start(primaryStage: Stage?) {
         val fxmlLoader = FXMLLoader(this::class.java.classLoader.getResource("csv_to_tex.fxml"))
-        this.parent.children.add(fxmlLoader.load())
+        this.parent.center = (fxmlLoader.load())
         Platform.setImplicitExit(true)
     }
 
